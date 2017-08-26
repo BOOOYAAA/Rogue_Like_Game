@@ -98,7 +98,7 @@ phy_position_y = owner.y+lengthdir_y(range,dir)
         physics_apply_impulse(x,y,lengthdir_x(phy_speed/2.65,-other.phy_rotation),lengthdir_y(phy_speed/2.65,-other.phy_rotation))
     }
     
-    other.zgravity = 0
+    other.zgravity = other.zgravity/2
     other.team = "good"
     
     image_index = 4
