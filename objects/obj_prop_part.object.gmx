@@ -39,7 +39,7 @@ destroy_score = 0
 
 ded = 1
 
-phy_fixed_rotation = true
+phy_fixed_rotation = true;
 
 physics_apply_impulse(x,y,random_range(0.1,-0.1),random_range(0.1,-0.1))
 </string>
@@ -69,7 +69,7 @@ physics_apply_impulse(x,y,random_range(0.1,-0.1),random_range(0.1,-0.1))
 
 z += z_speed
 z -= zgravity
-zgravity = lerp(zgravity,zgravity_max,0.08)
+zgravity = lerp(zgravity,zgravity_max,0.06)
 
 if z &lt; 1 {
 phy_linear_damping = 8

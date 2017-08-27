@@ -112,10 +112,10 @@ arrows = 20
 
 //Main Weapon
 wpn_name = "Test Sword"
-//wpn_sprite = spr_iron_shortsword
-//wpn_weapon_type = type_melee
-wpn_sprite = spr_wood_leapbow
-wpn_weapon_type = type_ranger
+wpn_sprite = spr_iron_shortsword
+wpn_weapon_type = type_melee
+//wpn_sprite = spr_wood_leapbow
+//wpn_weapon_type = type_ranger
 
 wpn_damage = 20
 wpn_knockback = 4
@@ -324,7 +324,7 @@ ys = yaxis
 if keys = "retro" {
 dir = point_direction(0,0,xs,ys)
 } else if keys = "standard" {
-dir = point_direction(x,y,mouse_x,mouse_y)
+dir = point_direction(x,y+3,mouse_x,mouse_y)
 }
 
 depth = -y
@@ -506,7 +506,7 @@ if (attack_key_release) and arrows &gt; 0 and bow_draw &gt; 0.6 {
     
     arrows -= 1
     
-    a = instance_create(x+lengthdir_x(4,dir),y+lengthdir_y(4,dir),obj_arrow);
+    a = instance_create(x+lengthdir_x(4,dir),y+3+lengthdir_y(4,dir),obj_arrow);
     a.damage = wpn_damage*(bow_draw)
     a.team = "good"
     with a {

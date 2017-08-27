@@ -29,6 +29,8 @@
 global.player_color[0] = c_red
 global.player_color[1] = c_green
 
+global.coins = 0
+
 room_goto_next();
 </string>
           </argument>

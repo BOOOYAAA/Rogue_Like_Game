@@ -62,6 +62,20 @@ destroy_loot_type = loot_noone
     p = instance_create(x,y,obj_prop_part);
     p.sprite_index = destroy_object_effect_sprite
     }
+    
+    switch (destroy_loot_type)
+    {
+        case loot_barrel: 
+        
+        if random(1) &lt; 0.5 {
+            instance_create(x,y,obj_coin)
+        } else if random(1) &lt; 0.4 {
+            instance_create(x,y,obj_arrow_pickup)
+        }
+        
+        break;
+    }
+     
 
 }
 </string>

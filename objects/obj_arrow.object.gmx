@@ -57,6 +57,7 @@ damage = 15
 
 attached = false
 attach_dir = 0
+attach_timer = 6
 
 target = noone
 
@@ -132,7 +133,7 @@ instance_destroy();
             //part_particles_create(global.pSystem,xprevious,yprevious-zprevious,effect,1)
         }
 
-
+if attach_timer &gt; 0 attach_timer -= 1
 zprevious = z
 </string>
           </argument>
@@ -268,7 +269,7 @@ if player != noone and can_hit = false and can_pick = true and (z &lt; 2 or atta
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if z &lt; 10 and can_hit = true {
+            <string>if z &lt; 10 and can_hit = true and attach_timer == 0 {
 
     target = other.id
     weld = physics_joint_weld_create(id,target,x,y, 0, 5, 2, false);
@@ -418,7 +419,7 @@ if dmg &lt; 0 dmg = 0
 //draw_sprite(spr_part_shadow,0,x,y)
 
 depth = -y + 4
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale*0.75,image_yscale*0.75,angle+rot,c_black,0.5*image_alpha)
+if attached = false draw_sprite_ext(sprite_index,image_index,x,y,image_xscale*0.75,image_yscale*0.75,angle+rot,c_black,0.5*image_alpha)
 depth = -y - z + 4
 draw_sprite_ext(sprite_index,image_index,x,y-z,image_xscale*0.75,-image_yscale*0.75,angle+rot,image_blend,image_alpha)
 
