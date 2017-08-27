@@ -88,7 +88,7 @@ phy_position_y = owner.y+lengthdir_y(range,dir)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if can_hit = true and other.can_hit = true and team = "good" and other.team = "bad" {
+            <string>if can_hit = true and other.can_hit = true and ((team = "good" and other.team = "bad") or (team = "bad" and other.team = "good")) {
 
     
     with owner {
@@ -99,7 +99,8 @@ phy_position_y = owner.y+lengthdir_y(range,dir)
     }
     
     other.zgravity = other.zgravity/2
-    other.team = "good"
+    other.team = team
+    other.damage += other.damage/3
     
     image_index = 4
     can_hit = false

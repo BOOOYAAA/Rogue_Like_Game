@@ -99,8 +99,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-dir = point_direction(x,y,obj_actor_player.x,obj_actor_player.y)
+            <string>var previous_distance = point_distance(obj_actor_player.x,obj_actor_player.y,obj_actor_player.xprevious,obj_actor_player.yprevious)
+var previous_direction = point_direction(obj_actor_player.x,obj_actor_player.y,obj_actor_player.xprevious,obj_actor_player.yprevious)+180
+
+dir = point_direction(x,y,obj_actor_player.x+lengthdir_x(previous_distance,previous_direction),obj_actor_player.y+lengthdir_y(previous_distance,previous_direction))
     
 a = instance_create(x+lengthdir_x(4,dir),y+lengthdir_y(4,dir),obj_arrow);
 a.team = "bad"

@@ -112,10 +112,10 @@ arrows = 20
 
 //Main Weapon
 wpn_name = "Test Sword"
-wpn_sprite = spr_iron_shortsword
-wpn_weapon_type = type_melee
-//wpn_sprite = spr_wood_leapbow
-//wpn_weapon_type = type_ranger
+//wpn_sprite = spr_iron_shortsword
+//wpn_weapon_type = type_melee
+wpn_sprite = spr_wood_leapbow
+wpn_weapon_type = type_ranger
 
 wpn_damage = 20
 wpn_knockback = 4
@@ -369,8 +369,8 @@ hearts_shake = lerp(hearts_shake,0,0.085)
 
 my_health_last = my_health
 
-if my_health &lt; my_health_max/3.5 {
-hearts_shake = 1
+if my_health &lt; my_health_max/2 {
+hearts_shake = 1.5
 }
 </string>
           </argument>
@@ -508,6 +508,7 @@ if (attack_key_release) and arrows &gt; 0 and bow_draw &gt; 0.6 {
     
     a = instance_create(x+lengthdir_x(4,dir),y+lengthdir_y(4,dir),obj_arrow);
     a.damage = wpn_damage*(bow_draw)
+    a.team = "good"
     with a {
     physics_apply_impulse(x ,y ,lengthdir_x(other.wpn_power*other.bow_draw/2.6,other.dir+random_range(2,-2)) ,lengthdir_y(other.wpn_power*other.bow_draw/2.6,other.dir+random_range(2,-2)) )
     }
