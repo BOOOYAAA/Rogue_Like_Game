@@ -430,6 +430,9 @@ attacking = false
             <kind>1</kind>
             <string>///TEST DEATH
 if my_health &lt; 0.1 {
+room_speed = 34
+obj_controller.alarm[10] = 1
+create_corpse(x,y)
 instance_destroy();
 }
 </string>

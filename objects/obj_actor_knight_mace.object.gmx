@@ -29,10 +29,10 @@
 event_inherited();
 
 //health and other
-my_health = 100
-my_health_max = 100
-defence = 30
-level = 2
+my_health = 120
+my_health_max = 120
+defence = 12
+level = 3
 exp_per_drop = 0
 
 ai_state = "chase"
@@ -47,7 +47,7 @@ cloth_sprite_now = image_index
 cloth_colour = c_white
 
 can_sprint = false
-mag = 8
+mag = 11
 </string>
           </argument>
         </arguments>
@@ -74,15 +74,15 @@ mag = 8
 wpn_sprite = spr_blunt_mace
 can_attack = true
 
-wpn_attack_speed = 30
+wpn_attack_speed = 28
 
 //Melee
 wpn_damage = 10
-wpn_reswing_speed = 0.04
+wpn_reswing_speed = 0.05
 wpn_swing_angle = 0
 
-wpn_knockback = 5
-wpn_range = 7
+wpn_knockback = 6
+wpn_range = 7.5
 </string>
           </argument>
         </arguments>
@@ -92,7 +92,7 @@ wpn_range = 7
   <PhysicsObject>-1</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>1</PhysicsObjectShape>
-  <PhysicsObjectDensity>1.45000004768372</PhysicsObjectDensity>
+  <PhysicsObjectDensity>1.5</PhysicsObjectDensity>
   <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
   <PhysicsObjectLinearDamping>8</PhysicsObjectLinearDamping>

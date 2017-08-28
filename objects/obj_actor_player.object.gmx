@@ -33,12 +33,6 @@ get_input()
 //player = 1
 //}
 
-my_health = 100
-my_health_max = 100
-my_mana = 50
-my_health_last = 100
-level = 0
-
 hurt_sound = snd_hurt2
 death_sound = noone
 
@@ -132,7 +126,7 @@ can_attack = true
 
 wpn_reswing_speed = 0.05
 wpn_swing_angle = 0
-wpn_swing_delay = 13
+wpn_swing_delay = 10
 
 wpn_range = 9
 
@@ -176,6 +170,36 @@ running = false
 dashing = false
 
 stamina = 100
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Character and Other
+my_health = 100
+my_health_max = 100
+my_mana = 50
+my_health_last = 100
+
+level = 1
+experience = 0
+
+defence = 0
 </string>
           </argument>
         </arguments>
